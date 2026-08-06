@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Dices, User, X, Sparkles } from "lucide-react";
-import { POPULAR_USERNAMES } from "../lib/utils";
+import { Dices, User, X } from "lucide-react";
 
 interface UsernameInputProps {
   initialUsername?: string;
@@ -20,11 +19,6 @@ export const UsernameInput: React.FC<UsernameInputProps> = ({
     if (username.trim()) {
       onFetch(username.trim());
     }
-  };
-
-  const handleChipClick = (user: string) => {
-    setUsername(user);
-    onFetch(user);
   };
 
   return (
@@ -77,24 +71,6 @@ export const UsernameInput: React.FC<UsernameInputProps> = ({
           </button>
         </div>
       </form>
-
-      {/* Popular Username Quick Test Chips */}
-      <div className="mt-3.5 flex items-center justify-center flex-wrap gap-2 text-xs text-white/50">
-        <span className="flex items-center gap-1 text-white/40 font-medium text-[11px] uppercase tracking-wider">
-          <Sparkles className="w-3 h-3 text-amber-400" /> Try user:
-        </span>
-        {POPULAR_USERNAMES.map((user) => (
-          <button
-            key={user}
-            type="button"
-            disabled={isLoading}
-            onClick={() => handleChipClick(user)}
-            className="px-2.5 py-1 rounded-lg bg-white/5 border border-white/10 hover:border-[#00e054]/50 hover:bg-white/10 hover:text-[#00e054] text-white/70 transition-all text-xs font-mono"
-          >
-            @{user}
-          </button>
-        ))}
-      </div>
     </div>
   );
 };
