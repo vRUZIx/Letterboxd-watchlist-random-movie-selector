@@ -30,13 +30,6 @@ export const Header: React.FC<HeaderProps> = ({ onReset }) => {
           </div>
         </div>
 
-        {/* Status pill & nav metadata */}
-        <div className="flex items-center gap-4 text-xs font-medium text-white/50">
-          <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-md">
-            <div className="w-2 h-2 rounded-full bg-[#00e054] animate-pulse" />
-            <span className="text-[#00e054] text-[10px] font-bold tracking-widest uppercase">API ACTIVE</span>
-          </div>
-        </div>
       </div>
     </header>
   );
