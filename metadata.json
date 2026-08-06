@@ -1,0 +1,1 @@
+{"name":"Letterboxd Random Picker","description":"Randomly pick movies from any public Letterboxd watchlist with custom filters and TMDB metadata.","requestFramePermissions":[],"majorCapabilities":["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]}
